@@ -224,7 +224,7 @@ function updateCartUI() {
                         <img src="${item.img}" alt="${item.name}" class="cart-item-img">
                         <div class="cart-item-info">
                             <div class="cart-item-name">${item.name}</div>
-                            <div class="cart-item-meta">${item.weight * 1000}g — 10,00 € l'unité</div>
+                            <div class="cart-item-meta">${item.weight * 1000}g — ${item.price.toFixed(2).replace('.', ',')} € l'unité</div>
                             <div class="cart-item-price-block">
                                 <div class="quantity-selector" style="padding: 2px;">
                                     <button class="qty-btn" onclick="changeCartItemQty('${item.id}', -1)" aria-label="Moins">-</button>

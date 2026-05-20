@@ -157,6 +157,29 @@ button, input, textarea, select {
     background-color: var(--primary);
     color: var(--text-dark);
     box-shadow: var(--shadow-sm);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%;
+    width: 50%;
+    height: 100%;
+    background: linear-gradient(
+        to right,
+        rgba(255, 255, 255, 0) 0%,
+        rgba(255, 255, 255, 0.4) 50%,
+        rgba(255, 255, 255, 0) 100%
+    );
+    transform: skewX(-25deg);
+    transition: none;
+}
+
+.btn-primary:hover::before {
+    animation: shimmer 1s ease-in-out;
 }
 
 .btn-primary:hover {
@@ -318,6 +341,7 @@ button, input, textarea, select {
 .hero {
     min-height: 100vh;
     padding-top: var(--header-height);
+    padding-bottom: 120px;
     display: flex;
     align-items: center;
     position: relative;
@@ -503,16 +527,19 @@ button, input, textarea, select {
     border-radius: var(--radius-lg);
     overflow: hidden;
     box-shadow: var(--shadow-md);
-    transition: all var(--transition-smooth);
+    transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                box-shadow 0.5s cubic-bezier(0.16, 1, 0.3, 1), 
+                border-color 0.5s cubic-bezier(0.16, 1, 0.3, 1);
     border: 1px solid rgba(217, 119, 6, 0.04);
     display: flex;
     flex-direction: column;
 }
 
 .product-card:hover {
-    transform: translateY(-8px);
-    box-shadow: var(--shadow-lg);
-    border-color: rgba(217, 119, 6, 0.15);
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0 20px 40px rgba(217, 119, 6, 0.12), 
+                0 1px 3px rgba(0, 0, 0, 0.05);
+    border-color: rgba(217, 119, 6, 0.3);
 }
 
 .product-img-container {
@@ -545,6 +572,11 @@ button, input, textarea, select {
     font-weight: 600;
     color: var(--secondary);
     box-shadow: var(--shadow-sm);
+    transition: transform var(--transition-smooth);
+}
+
+.product-card:hover .product-badge {
+    transform: scale(1.05) rotate(-2deg);
 }
 
 .product-content {
@@ -669,14 +701,14 @@ button, input, textarea, select {
     width: 100%;
     max-width: 480px;
     height: 100%;
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(20px);
+    background-color: rgba(255, 255, 255, 0.85);
+    backdrop-filter: blur(20px) saturate(160%);
     box-shadow: -10px 0 40px rgba(0, 0, 0, 0.15);
     z-index: 1001;
     display: flex;
     flex-direction: column;
     transition: right var(--transition-smooth);
-    border-left: 1px solid rgba(255, 255, 255, 0.4);
+    border-left: 1px solid rgba(217, 119, 6, 0.15);
 }
 
 .cart-overlay.open + .cart-modal,
@@ -1407,11 +1439,11 @@ button, input, textarea, select {
     max-width: calc(100vw - 60px);
     height: 500px;
     max-height: calc(100vh - 150px);
-    background-color: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(15px);
-    border: 1px solid var(--border-color);
+    background-color: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(217, 119, 6, 0.15);
     border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
+    box-shadow: 0 20px 50px rgba(38, 25, 0, 0.15);
     z-index: 1000;
     display: flex;
     flex-direction: column;
@@ -1629,5 +1661,62 @@ button, input, textarea, select {
         width: calc(100vw - 30px);
         height: 400px;
         max-height: calc(100vh - 120px);
+    }
+}
+
+/* ==========================================================================
+   HIGH-END GRAPHICS & ANIMATIONS
+   ========================================================================== */
+
+/* Hero Wave Separator */
+.hero-wave {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+    transform: rotate(180deg);
+    z-index: 4;
+}
+
+.hero-wave svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 90px;
+}
+
+.hero-wave .shape-fill {
+    fill: var(--bg-cream);
+}
+
+/* Hero entrance reveal animations */
+.hero-content > * {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: revealUp 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.hero-content .hero-subtitle {
+    animation-delay: 0.1s;
+}
+
+.hero-content h1 {
+    animation-delay: 0.25s;
+}
+
+.hero-content .hero-description {
+    animation-delay: 0.4s;
+}
+
+.hero-content .hero-actions {
+    animation-delay: 0.55s;
+}
+
+@keyframes revealUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
     }
 }

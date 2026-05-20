@@ -2,6 +2,12 @@
 
 Ce projet a été généré et structuré avec l'assistance d'agents IA (**Gemini/Antigravity** et **Claude/Cursor**). Ce fichier regroupe toutes les informations utiles pour maintenir, modifier et héberger le site web statique du rucher.
 
+> [!IMPORTANT]
+> **Flux de travail Multi-Agents (Gemini & Claude) :**
+> * Le fichier `AGENT.md` est la source unique de vérité pour la documentation et les consignes de développement.
+> * `GEMINI.md` et `CLAUDE.md` sont des **liens physiques (hard links)** pointant vers `AGENT.md`.
+> * **Consigne pour les agents IA :** Toujours éditer `AGENT.md` directement. Ne supprimez pas et ne recréez pas les fichiers `GEMINI.md` et `CLAUDE.md` sous forme de fichiers simples afin de préserver le lien physique et l'accès natif de chaque assistant.
+
 ---
 
 ## 📁 Architecture du Projet

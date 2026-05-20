@@ -69,10 +69,10 @@ Si le tarif d'un miel évolue (par exemple à 11 €), modifiez la valeur `price
 Le site est déployé de manière entièrement automatisée grâce à **GitHub Actions** à chaque mise à jour sur le dépôt.
 
 ### 1. Pré-production / Tests (GitHub Pages)
-À chaque fois que du code est poussé (sur les branches `main` ou `develop`), le workflow remplace les placeholders par vos secrets GitHub et déploie le site sur **GitHub Pages**.
+À chaque fois que du code est poussé sur la branche **`develop`**, le workflow remplace les placeholders par vos secrets GitHub et déploie le site sur **GitHub Pages**. (La branche `main` ignore cette étape pour éviter les conflits de permissions GitHub Pages).
 
 ### 2. Production (Infomaniak FTP)
-Après le déploiement en pré-production, le workflow attend une **validation manuelle** avant de déployer en production. Dans l'onglet Actions de GitHub, cliquez sur **Review deployments** puis **Approve and deploy** pour envoyer les fichiers par FTP vers Infomaniak.
+Lorsque du code est fusionné ou poussé sur la branche principale **`main`**, le workflow déclenche le déploiement. Il attend votre **validation manuelle** dans l'onglet Actions de GitHub (cliquez sur **Review deployments** puis **Approve and deploy**) avant d'envoyer les fichiers par FTP vers votre hébergement chez Infomaniak.
 
 Pour configurer GitHub Pages pour ce workflow :
 1. Allez sur votre dépôt GitHub : [Hantael/rucher](https://github.com/Hantael/rucher).

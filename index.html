@@ -511,13 +511,55 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </div>
-            <div class="footer-bottom" style="flex-direction: column; gap: 10px; align-items: center; text-align: center; color: var(--text-light);">
-                <p>&copy; 2026 <span style="color: var(--primary); font-weight: 600;">Le Rucher d'Hantael</span>. Gérante : <span style="color: var(--primary); font-weight: 600;">Marine Morard</span>. Tous droits réservés.</p>
+            <div class="footer-bottom" style="flex-direction: column; gap: 10px; align-items: center; text-align: center;">
+                <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem;">&copy; 2026 Le Rucher d'Hantael. Gérante : Marine Morard. Tous droits réservés.</p>
                 <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.95);">Miel 100% récolté et mis en pot à Orphin (Yvelines, France) — TVA non applicable, art. 293 B du CGI</p>
                 <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.75); margin-top: 5px;">Conçu localement pour le respect des abeilles 💛</p>
+                <p style="margin-top: 5px;"><a href="#" id="open-legal" style="font-size: 0.85rem; color: var(--text-light-muted); text-decoration: underline; transition: color var(--transition-smooth);">Mentions Légales</a></p>
             </div>
         </div>
     </footer>
+
+    <!-- ==========================================================================
+       MENTIONS LEGALES MODAL
+       ========================================================================== -->
+    <div class="legal-overlay" id="legal-overlay">
+        <div class="legal-card">
+            <button class="legal-close" id="close-legal" aria-label="Fermer les mentions légales">&times;</button>
+            <div class="legal-content">
+                <h3>Mentions Légales</h3>
+                
+                <h4>Éditeur du site</h4>
+                <p>
+                    <strong>Le Rucher d'Hantael</strong><br>
+                    Propriétaire & Directrice de la publication : Marine Morard<br>
+                    Adresse : __RUCHER_STREET__, __RUCHER_ZIP__ __RUCHER_CITY__<br>
+                    E-mail : __RUCHER_EMAIL__<br>
+                    Téléphone : __RUCHER_PHONE_FORMATTED__
+                </p>
+                
+                <h4>Immatriculation</h4>
+                <p>
+                    Numéro SIRET : __RUCHER_SIRET__<br>
+                    Régime : Micro-entreprise agricole (TVA non applicable, art. 293 B du CGI)
+                </p>
+                
+                <h4>Hébergement</h4>
+                <p>
+                    Le site est hébergé par :<br>
+                    <strong>Infomaniak Network SA</strong><br>
+                    Adresse : Rue Eugène-Marziano 25, 1227 Les Acacias, Genève, Suisse<br>
+                    Téléphone : +41 22 820 35 44<br>
+                    Site web : <a href="https://www.infomaniak.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">www.infomaniak.com</a>
+                </p>
+                
+                <h4>Propriété intellectuelle</h4>
+                <p>
+                    L'ensemble des contenus de ce site (textes, photographies, logos) est protégé par les lois en vigueur relatives à la propriété intellectuelle. Toute reproduction ou représentation, intégrale ou partielle, est interdite sans l'accord préalable de l'éditeur.
+                </p>
+            </div>
+        </div>
+    </div>
 
     <!-- ==========================================================================
        ASSISTANT CONVERSATIONNEL (CHATBOT)

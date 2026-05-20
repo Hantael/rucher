@@ -34,7 +34,8 @@ def main():
         "__RUCHER_STREET__": os.environ.get("RUCHER_STREET"),
         "__RUCHER_ZIP__": os.environ.get("RUCHER_ZIP"),
         "__RUCHER_CITY__": os.environ.get("RUCHER_CITY"),
-        "__RUCHER_MAPS_QUERY__": os.environ.get("RUCHER_MAPS_QUERY")
+        "__RUCHER_MAPS_QUERY__": os.environ.get("RUCHER_MAPS_QUERY"),
+        "__RUCHER_SIRET__": os.environ.get("RUCHER_SIRET") or "En cours d'immatriculation"
     }
     
     workspace = os.getcwd()

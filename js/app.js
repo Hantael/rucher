@@ -28,6 +28,7 @@ document.addEventListener('DOMContentLoaded', () => {
     setupFormDateRestrictions();
     setupReservationHandlers();
     setupChatbot();
+    setupLegalModalEvents();
 });
 
 // ==========================================================================
@@ -324,6 +325,32 @@ function setupCartDrawerEvents() {
         continueShoppingBtn.addEventListener('click', () => {
             closeCartDrawer();
             window.location.hash = '#miels';
+        });
+    }
+}
+
+function setupLegalModalEvents() {
+    const openBtn = document.getElementById('open-legal');
+    const overlay = document.getElementById('legal-overlay');
+    const closeBtn = document.getElementById('close-legal');
+    
+    if (openBtn && overlay && closeBtn) {
+        openBtn.addEventListener('click', (e) => {
+            e.preventDefault();
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden'; // Lock scrolling
+        });
+        
+        const closeLegal = () => {
+            overlay.classList.remove('open');
+            document.body.style.overflow = ''; // Restore scrolling
+        };
+        
+        closeBtn.addEventListener('click', closeLegal);
+        overlay.addEventListener('click', (e) => {
+            if (e.target === overlay) {
+                closeLegal();
+            }
         });
     }
 }

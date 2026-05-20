@@ -566,6 +566,7 @@ const CHATBOT_FAQ = {
         { text: "🍯 Miels et Tarifs", action: "miels" },
         { text: "📍 Retrait et Horaires", action: "retrait" },
         { text: "💳 Moyens de paiement", action: "paiements" },
+        { text: "🐝 Essaims (Dépannage)", action: "essaims" },
         { text: "📞 Contact et Direct", action: "contact" },
         { text: "🐝 Histoire et Pratiques", action: "histoire" }
     ],
@@ -582,12 +583,16 @@ const CHATBOT_FAQ = {
             text: "💳 **Moyens de paiement acceptés :**\n\nPour simplifier votre retrait (nous n'avons pas de terminal de paiement pour carte bancaire) :\n\n• **Espèces**\n• **Chèque** (à l'ordre de Marine Morard)\n• **Wero / Paylib** (virement instantané par mobile sur le numéro de Marine : **__RUCHER_PHONE_FORMATTED__**)",
             menu: ["miels", "retrait", "contact"]
         },
+        essaims: {
+            text: "🐝 **Récupération d'essaims d'abeilles :**\n\nSi un essaim s'est installé chez vous, Marine peut se déplacer pour le récupérer gratuitement afin de le mettre en sécurité, **uniquement sur la commune d'Orphin** (selon ses disponibilités et son emploi du temps).\n\nPour une demande de dépannage sur Orphin, contactez Marine directement :\n• Par téléphone/WhatsApp au **__RUCHER_PHONE_FORMATTED__**",
+            menu: ["contact", "histoire"]
+        },
         contact: {
             text: "📞 **Contacter Marine Morard :**\n\n• **Téléphone :** __RUCHER_PHONE_FORMATTED__ (Appel, SMS ou WhatsApp)\n• **E-mail :** __RUCHER_EMAIL__\n\nN'hésitez pas à nous envoyer un message via le formulaire de contact en bas de la page !",
             menu: ["miels", "retrait", "histoire"]
         },
         histoire: {
-            text: "🐝 **Le Rucher d'Hantael :**\n\nGéré par Marine Morard à Orphin, notre rucher compte actuellement **14 ruches** de format Dadant, avec une transition progressive vers le matériel **Nicoplast**.\n\nNous ne travaillons pas avec l'abeille noire. Notre miel est extrait et mis en pot à froid localement à Orphin, garantissant un produit 100% naturel et artisanal 💛.",
+            text: "🐝 **Le Rucher d'Hantael :**\n\nGéré par Marine Morard à Orphin, notre rucher compte actuellement **14 ruches** de format Dadant, avec une transition progressive vers le matériel **Nicoplast**.\n\nNotre miel est extrait et mis en pot à froid localement à Orphin, garantissant un produit 100% naturel et artisanal 💛.",
             menu: ["miels", "retrait", "contact"]
         }
     },
@@ -689,6 +694,8 @@ function setupChatbot() {
             matchedKey = 'paiements';
         } else if (matchingKeywords(normalized, ['contact', 'telephone', 'mail', 'tel', 'ecrire', 'whatsapp', 'marine', 'morard', 'joindre'])) {
             matchedKey = 'contact';
+        } else if (matchingKeywords(normalized, ['essaim', 'essaims', 'recup', 'recuperer', 'essaimage'])) {
+            matchedKey = 'essaims';
         } else if (matchingKeywords(normalized, ['ruche', 'histoire', 'qui', 'origine', 'abeille', 'materiel', 'nicoplast', 'dadant', 'production'])) {
             matchedKey = 'histoire';
         }

@@ -71,7 +71,7 @@ def main():
             remote_item = f"{remote_path}/{item}" if remote_path else item
             
             # Ignorer les dossiers git, github, et le fichier doc
-            if item in ['.git', '.github', 'GEMINI.md', 'README.md']:
+            if item in ['.git', '.github', 'AGENT.md', 'GEMINI.md', 'CLAUDE.md', 'README.md']:
                 continue
                 
             if os.path.isdir(local_item):

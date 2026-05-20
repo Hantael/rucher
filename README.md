@@ -23,7 +23,12 @@ Ce site moderne, rapide et entièrement responsive permet aux clients de découv
 ```text
 rucher_site/
 ├── README.md                 # Cette présentation
-├── GEMINI.md                 # Guide de maintenance technique (contacts, prix, déploiement)
+├── AGENT.md                  # Guide de maintenance technique (contacts, prix, déploiement)
+├── GEMINI.md                 # Hard link vers AGENT.md (accès natif Gemini)
+├── CLAUDE.md                 # Hard link vers AGENT.md (accès natif Claude)
+├── .github/
+│   ├── workflows/            # Pipelines CI/CD (GitHub Pages + FTP Infomaniak)
+│   └── scripts/              # Script de déploiement FTP (deploy_ftp.py)
 ├── index.html                # Structure de la page, SEO (JSON-LD), contenu textuel et formulaires
 ├── 404.html                  # Page de redirection en cas d'erreur 404 (GitHub Pages)
 ├── .htaccess                 # Configuration Apache pour redirection 404 (Infomaniak)
@@ -52,6 +57,6 @@ Comme il s'agit d'un site web statique, aucun serveur d'application n'est requis
 
 ## 🛠️ Maintenance & Personnalisation
 
-Toutes les configurations principales (numéro de téléphone WhatsApp, adresse e-mail, tarifs et contenance des miels) sont centralisées dans le fichier `js/app.js`.
+Les informations de contact personnelles (téléphone, e-mail, adresse) sont gérées de manière sécurisée via les **GitHub Secrets** et injectées automatiquement lors du déploiement par la pipeline GitHub Actions. Seuls les **tarifs et poids des miels** sont modifiables directement dans le fichier `js/app.js`.
 
-Pour plus de détails techniques sur la personnalisation et le déploiement sur les serveurs, veuillez vous référer à la documentation technique : [GEMINI.md](./GEMINI.md).
+Pour plus de détails techniques sur la personnalisation et le déploiement sur les serveurs, veuillez vous référer à la documentation technique : [AGENT.md](./AGENT.md).

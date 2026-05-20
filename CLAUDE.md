@@ -84,4 +84,4 @@ Pour configurer GitHub Pages pour ce workflow :
 - **Responsive Web Design** : Optimisé pour mobile, tablette et écrans larges de bureau.
 - **Panier d'achat local** : Sauvegarde automatique de la sélection de l'utilisateur dans son navigateur en cas de rafraîchissement.
 - **Redirection de Commande** : Génère un récapitulatif formaté complet à envoyer en un clic au rucher.
-- **Accessibilité (A11y)** : Utilisation d'éléments sémantiques HTML5 et de contrastes conformes aux recommandations modernes.
+- **Accessibilité (A11y)** : Utilisation d'éléments séman

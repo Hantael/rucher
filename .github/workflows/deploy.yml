@@ -18,8 +18,9 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  # Job 1: Deploy to GitHub Pages (Staging/Pre-production on both branches)
+  # Job 1: Deploy to GitHub Pages (Staging/Pre-production on develop)
   deploy-pages:
+    if: github.ref == 'refs/heads/develop' || github.event_name == 'workflow_dispatch'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
@@ -56,10 +57,10 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # Job 2: Deploy to Infomaniak FTP (Production - with manual approval gate)
+  # Job 2: Deploy to Infomaniak FTP (Production - with manual approval gate on main)
   deploy-prod-ftp:
+    if: github.ref == 'refs/heads/main' || github.event_name == 'workflow_dispatch'
     runs-on: ubuntu-latest
-    needs: deploy-pages
     environment:
       name: production
     steps:

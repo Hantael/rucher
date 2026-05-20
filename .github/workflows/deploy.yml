@@ -14,8 +14,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
-  cancel-in-progress: false
+  group: "${{ github.workflow }}-${{ github.ref }}"
+  cancel-in-progress: true
 
 jobs:
   # Job 1: Deploy to GitHub Pages (Staging/Pre-production on develop)
@@ -91,3 +91,29 @@ jobs:
           FTP_HOST: ${{ secrets.FTP_HOST }}
           FTP_USER: ${{ secrets.FTP_USER }}
           FTP_PASS: ${{ secrets.FTP_PASS }}
+
+  # Job 3: Automatically create a Pull Request from develop to main
+  create-pr:
+    if: github.ref == 'refs/heads/develop' || github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    needs: deploy-pages
+    permissions:
+      pull-requests: write
+    steps:
+      - name: Create Pull Request
+        run: |
+          status_code=$(curl -s -o response.json -w "%{http_code}" -X POST \
+            -H "Authorization: Bearer ${{ secrets.GITHUB_TOKEN }}" \
+            -H "Accept: application/vnd.github.v3+json" \
+            https://api.github.com/repos/${{ github.repository }}/pulls \
+            -d '{"title":"🚀 Production Release - Sync develop to main","head":"develop","base":"main","body":"Cette Pull Request a été générée automatiquement.\n\n### 📝 Instructions\n1. Vérifiez le rendu de pré-production sur **GitHub Pages**.\n2. Si tout est correct, fusionnez cette Pull Request.\n3. La pipeline de production se lancera sur la branche `main` et attendra votre validation finale pour envoyer le site par FTP chez Infomaniak."}')
+          
+          if [ "$status_code" -eq 201 ]; then
+            echo "Pull Request créée avec succès."
+          elif [ "$status_code" -eq 422 ]; then
+            echo "Une Pull Request existe déjà pour cette branche, aucune action nécessaire."
+          else
+            echo "Erreur lors de la création de la Pull Request (Code: $status_code)"
+            cat response.json
+            exit 1
+          fi

@@ -227,6 +227,7 @@
         <div class="container">
             <div class="section-header">
                 <span class="hero-subtitle" style="color: var(--secondary);">Notre Récolte</span>
+
                 <h2>Nos Miels du Moment</h2>
                 <p>Découvrez nos miels artisanaux en pot de 500g. Disponibles à la réservation en ligne et à retirer directement au rucher.</p>
             </div>
@@ -243,8 +244,8 @@
                             <span class="product-size">Pot de 500g</span>
                             <div class="product-price">10,00 € <span>(20€/kg)</span></div>
                         </div>
-                        <h3>Miel de Printemps</h3>
-                        <p class="product-description">Miel toutes fleurs très doux et floral avec une teinte jaune pâle. Il cristallise rapidement dans les jours qui suivent l'extraction. Issu principalement du colza, des arbres fruitiers (pommier, poirier, cerisier) et des fleurs de prairie (pissenlit) d'Orphin.</p>
+                        <h3><a href="miel-printemps.html" style="color: inherit; transition: color var(--transition-fast);">Miel de Printemps</a></h3>
+                        <p class="product-description">Miel toutes fleurs très doux et floral avec une teinte jaune pâle. Il cristallise rapidement dans les jours qui suivent l'extraction. Issu principalement du colza, des arbres fruitiers (pommier, poirier, cerisier) et des fleurs de prairie (pissenlit) d'Orphin. <a href="miel-printemps.html" style="color: var(--secondary); font-weight: 500; text-decoration: underline; white-space: nowrap;">En savoir plus →</a></p>
                         <div class="product-action">
                             <div class="quantity-selector">
                                 <button class="qty-btn dec-qty" aria-label="Diminuer la quantité">-</button>
@@ -269,8 +270,8 @@
                             <span class="product-size">Pot de 500g</span>
                             <div class="product-price">10,00 € <span>(20€/kg)</span></div>
                         </div>
-                        <h3>Miel d'Été</h3>
-                        <p class="product-description">Miel toutes fleurs plus sombre et complexe, à la robe ambrée, aux notes douces et légèrement mentholées. Il est butiné principalement sur le tilleul de la forêt de Rambouillet et le tournesol des plaines environnantes.</p>
+                        <h3><a href="miel-ete.html" style="color: inherit; transition: color var(--transition-fast);">Miel d'Été</a></h3>
+                        <p class="product-description">Miel toutes fleurs plus sombre et complexe, à la robe ambrée, aux notes douces et légèrement mentholées. Il est butiné principalement sur le tilleul de la forêt de Rambouillet et le tournesol des plaines environnantes. <a href="miel-ete.html" style="color: var(--secondary); font-weight: 500; text-decoration: underline; white-space: nowrap;">En savoir plus →</a></p>
                         <div class="product-action" style="width: 100%;">
                             <button class="btn product-btn" disabled style="width: 100%; justify-content: center; background: #f1f5f9; color: #94a3b8; border: 1px solid #cbd5e1; cursor: not-allowed; text-align: center; display: block; font-weight: 500;">
                                 <span>Victime de son succès</span>
@@ -351,7 +352,7 @@
     <div class="cart-overlay" id="cart-overlay"></div>
     <div class="cart-modal" id="cart-modal">
         <div class="cart-header">
-            <h2 id="cart-title">Votre Panier 🍯</h2>
+            <h2 id="cart-title">Votre Panier de Réservation 🍯</h2>
             <button class="cart-close-btn" id="cart-close-btn" aria-label="Fermer le panier">&times;</button>
         </div>
         
@@ -365,6 +366,13 @@
             </div>
             
             <div id="cart-items-container" style="display: none;">
+                <div class="cart-info-banner">
+                    <span class="info-banner-icon">⚠️</span>
+                    <div class="info-banner-text">
+                        <strong>Panier de réservation uniquement :</strong> aucun paiement en ligne. Vos produits sont réservés pour un retrait sur place, avec règlement final lors du retrait.
+                    </div>
+                </div>
+                
                 <div class="cart-items-list" id="cart-items-list">
                     <!-- Items inserted by JS -->
                 </div>
@@ -382,6 +390,16 @@
                         <span>Total de votre réservation :</span>
                         <span id="cart-total-price">0,00 €</span>
                     </div>
+                </div>
+                
+                <div class="payment-methods-notice">
+                    <h4>Moyens de paiement acceptés au retrait :</h4>
+                    <div class="payment-badges">
+                        <span class="payment-badge"><span class="badge-icon">💵</span> Espèces</span>
+                        <span class="payment-badge"><span class="badge-icon">📝</span> Chèque</span>
+                        <span class="payment-badge"><span class="badge-icon">📱</span> Wero / Paylib</span>
+                    </div>
+                    <p class="payment-subtext">Aucun paiement en ligne • Le règlement s'effectue lors du retrait</p>
                 </div>
             </div>
         </div>
@@ -433,10 +451,31 @@
                     <textarea id="client-notes" class="form-input" rows="3" placeholder="Ex: Précision sur l'heure, demande particulière..."></textarea>
                 </div>
                 
-                <!-- Notes sur les paiements et le RGPD -->
-                <div style="font-size: 0.8rem; line-height: 1.4; color: var(--text-muted); margin-top: 20px; padding: 12px; border-top: 1px dashed var(--border-color); background-color: var(--bg-cream); border-radius: var(--radius-sm);">
-                    <p style="margin-bottom: 6px;">💳 <strong>Règlement lors du retrait :</strong> Espèces, chèque ou Wero/Paylib (virement instantané par mobile).</p>
-                    <p>🔒 <strong>Confidentialité (RGPD) :</strong> Vos coordonnées servent exclusivement au traitement de votre réservation par le Rucher d'Hantael et ne seront jamais partagées avec des tiers.</p>
+                <!-- Encart de Paiement et RGPD Stylisé -->
+                <div class="checkout-info-block">
+                    <div class="payment-methods-card">
+                        <h4>💶 Règlement lors du retrait</h4>
+                        <div class="payment-badges-list">
+                            <div class="payment-badge-item">
+                                <span class="badge-tag">Espèces 💵</span>
+                                <span class="badge-desc">Prévoyez l'appoint si possible</span>
+                            </div>
+                            <div class="payment-badge-item">
+                                <span class="badge-tag">Chèque 📝</span>
+                                <span class="badge-desc">À l'ordre de Marine Morard</span>
+                            </div>
+                            <div class="payment-badge-item">
+                                <span class="badge-tag">Wero / Paylib 📱</span>
+                                <span class="badge-desc">Virement mobile instantané</span>
+                            </div>
+                        </div>
+                        <p class="payment-warning-text">⚠️ Aucun paiement ne s'effectue en ligne sur ce site.</p>
+                    </div>
+                    
+                    <div class="rgpd-notice-card">
+                        <span class="rgpd-icon">🔒</span>
+                        <p><strong>Confidentialité :</strong> Vos données sont traitées conformément à notre <a href="politique-confidentialite.html" target="_blank" style="text-decoration: underline; color: var(--secondary);">politique de confidentialité</a> et servent exclusivement à gérer votre retrait.</p>
+                    </div>
                 </div>
             </form>
         </div>
@@ -515,7 +554,11 @@
                 <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem;">&copy; 2026 Le Rucher d'Hantael. Gérante : Marine Morard. Tous droits réservés.</p>
                 <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.95);">Miel 100% récolté et mis en pot à Orphin (Yvelines, France) — TVA non applicable, art. 293 B du CGI</p>
                 <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.75); margin-top: 5px;">Conçu localement pour le respect des abeilles 💛</p>
-                <p style="margin-top: 5px;"><a href="#" id="open-legal" style="font-size: 0.85rem; color: var(--text-light-muted); text-decoration: underline; transition: color var(--transition-smooth);">Mentions Légales</a></p>
+                <p style="margin-top: 5px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="#" id="open-legal" style="font-size: 0.85rem; color: var(--text-light-muted); text-decoration: underline; transition: color var(--transition-smooth);">Mentions Légales</a>
+                    <span style="color: var(--text-light-muted); font-size: 0.85rem;">|</span>
+                    <a href="politique-confidentialite.html" style="font-size: 0.85rem; color: var(--text-light-muted); text-decoration: underline; transition: color var(--transition-smooth);">Politique de confidentialité</a>
+                </p>
             </div>
         </div>
     </footer>

@@ -1,0 +1,401 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Politique de Confidentialité - Le Rucher d'Hantael</title>
+    
+    <!-- Meta Tags SEO -->
+    <meta name="description" content="Découvrez la politique de confidentialité du Rucher d'Hantael. Nous expliquons comment sont gérées vos données de réservation et l'usage de localStorage.">
+    <meta name="keywords" content="politique de confidentialite, cookies, rgpd, localStorage, rucher hantael, yvelines">
+    <meta name="author" content="Le Rucher d'Hantael">
+    
+    <!-- Open Graph (Facebook / LinkedIn) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Politique de Confidentialité - Le Rucher d'Hantael">
+    <meta property="og:description" content="Informations sur le traitement de vos données personnelles et l'absence de cookies traceurs sur notre site.">
+    
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon Shortcut -->
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍯</text></svg>">
+    
+    <!-- Canonical Link -->
+    <link rel="canonical" href="https://hantael.fr/politique-confidentialite.html">
+</head>
+<body>
+
+    <!-- HEADER & NAVIGATION -->
+    <header class="header" id="header">
+        <div class="container">
+            <a href="index.html" class="logo-link" id="logo-link">
+                <span class="logo-icon">🐝</span>
+                <span class="logo-text">Le Rucher <span>d'Hantael</span></span>
+            </a>
+            
+            <nav class="nav" id="nav">
+                <ul class="nav-list">
+                    <li><a href="index.html" class="nav-link">Accueil</a></li>
+                    <li><a href="index.html#histoire" class="nav-link">L'Histoire</a></li>
+                    <li><a href="index.html#miels" class="nav-link">Nos Miels</a></li>
+                    <li><a href="index.html#contact" class="nav-link">Contact & Accès</a></li>
+                </ul>
+            </nav>
+            
+            <div style="display: flex; align-items: center; gap: 15px;">
+                <button class="cart-toggle-btn" id="cart-toggle-btn" aria-label="Voir le panier">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                    <span>Panier</span>
+                    <span class="cart-count-badge" id="cart-count">0</span>
+                </button>
+                
+                <div class="menu-burger" id="menu-burger" aria-label="Ouvrir le menu">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" y1="12" x2="20" y2="12"/><line x1="4" y1="6" x2="20" y2="6"/><line x1="4" y1="18" x2="20" y2="18"/></svg>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- MAIN PRIVACY CONTENT -->
+    <main style="padding-top: var(--header-height); min-height: 80vh; background-color: var(--bg-light);">
+        <div class="container" style="padding-top: 40px; padding-bottom: 60px;">
+            
+            <div class="privacy-container">
+                <h1>Politique de Confidentialité</h1>
+                <p class="privacy-last-update">Dernière mise à jour : 21 mai 2026</p>
+                
+                <div class="privacy-content">
+                    <p>La protection de vos données personnelles est une priorité pour <strong>Le Rucher d'Hantael</strong>. Cette politique décrit comment nous traitons vos informations personnelles lorsque vous utilisez notre site web pour réserver nos pots de miel.</p>
+                    
+                    <h2>1. Responsable du traitement</h2>
+                    <p>Le traitement des données personnelles collectées sur ce site est réalisé sous la responsabilité de :<br>
+                    <strong>Marine Morard</strong>, gérante de la micro-entreprise agricole Le Rucher d'Hantael.<br>
+                    Adresse : __RUCHER_STREET__, __RUCHER_ZIP__ __RUCHER_CITY__<br>
+                    E-mail : __RUCHER_EMAIL__</p>
+                    
+                    <h2>2. Données collectées et finalités</h2>
+                    <p>Nous collectons uniquement les informations que vous nous transmettez volontairement lors de la saisie de votre réservation dans le panier :</p>
+                    <ul>
+                        <li><strong>Identité :</strong> Nom et prénom, pour identifier votre commande lors du retrait.</li>
+                        <li><strong>Coordonnées :</strong> Numéro de téléphone et adresse e-mail, indispensables pour vous recontacter afin de convenir du rendez-vous ou vous informer de la disponibilité des produits.</li>
+                        <li><strong>Détails du retrait :</strong> Date et heure de passage souhaitées, ainsi que vos éventuelles précisions dans le champ de message libre.</li>
+                    </ul>
+                    <p>Ces données sont traitées dans le but exclusif de gérer la réservation de vos miels et d'assurer le suivi de votre retrait sur place.</p>
+                    
+                    <h2>3. Base légale du traitement</h2>
+                    <p>Le traitement de vos données repose sur :</p>
+                    <ul>
+                        <li><strong>L'exécution de mesures précontractuelles :</strong> la préparation de votre commande et la prise de rendez-vous pour sa remise sur place.</li>
+                        <li><strong>Votre consentement :</strong> que vous manifestez expressément en cliquant sur le bouton d'envoi de la réservation par WhatsApp ou par e-mail.</li>
+                    </ul>
+                    
+                    <h2>4. Destinataires et sécurité des données</h2>
+                    <p>Vos données sont destinées **uniquement** à l'usage interne du Rucher d'Hantael. Elles ne sont **jamais** vendues, louées, cédées ou partagées avec des tiers à des fins publicitaires ou commerciales.</p>
+                    <p>Le site internet n'enregistre aucune donnée dans une base de données distante. Les informations du formulaire sont simplement formatées pour générer un message prêt à l'envoi qui transite directement par votre propre application (WhatsApp ou votre client e-mail personnel).</p>
+                    
+                    <h2>5. Durée de conservation des données</h2>
+                    <p>Vos coordonnées et informations de réservation sont conservées pour une durée strictement nécessaire à la finalisation de votre commande et au maximum pendant <strong>3 mois</strong> après la date de retrait effective de vos miels, sauf demande explicite de suppression anticipée de votre part.</p>
+                    
+                    <h2>6. Cookies et stockage local (localStorage)</h2>
+                    <p>Notre site est conçu pour être particulièrement respectueux de votre vie privée :</p>
+                    <ul>
+                        <li><strong>Pas de cookies publicitaires ou de ciblage :</strong> Nous n'utilisons aucun cookie de suivi publicitaire ou d'analyse comportementale tierce (comme Google Analytics ou Facebook Pixel).</li>
+                        <li><strong>Utilisation du <code>localStorage</code> :</strong> Le site utilise la fonctionnalité <code>localStorage</code> de votre navigateur uniquement pour enregistrer de manière temporaire les pots de miel ajoutés à votre panier. Cela vous évite de perdre votre sélection si vous fermez ou rafraîchissez la page. Ce stockage local est strictement fonctionnel, s'effectue exclusivement sur votre ordinateur et est dispensé de consentement en vertu de la réglementation RGPD (car strictement nécessaire à la fourniture du service de réservation en ligne).</li>
+                    </ul>
+                    
+                    <h2>7. Vos droits</h2>
+                    <p>Conformément au Règlement Général sur la Protection des Données (RGPD) et à la loi "Informatique et Libertés", vous disposez d'un droit d'accès, de rectification, de portabilité et de suppression des données qui vous concernent.</p>
+                    <p>Vous pouvez exercer ces droits à tout moment en nous adressant votre demande par e-mail à l'adresse suivante : <strong>__RUCHER_EMAIL__</strong>. Nous nous engageons à vous répondre dans les meilleurs délais.</p>
+                </div>
+            </div>
+            
+        </div>
+    </main>
+
+    <!-- CART OVERLAY & SLIDE DRAWER -->
+    <div class="cart-overlay" id="cart-overlay"></div>
+    <div class="cart-modal" id="cart-modal">
+        <div class="cart-header">
+            <h2 id="cart-title">Votre Panier de Réservation 🍯</h2>
+            <button class="cart-close-btn" id="cart-close-btn" aria-label="Fermer le panier">&times;</button>
+        </div>
+        
+        <!-- STEP 1 : CART LIST -->
+        <div class="cart-body" id="cart-step-list">
+            <div class="cart-empty-message" id="cart-empty-message">
+                <div class="cart-empty-icon">🐝</div>
+                <p>Votre panier est vide pour le moment.</p>
+                <p style="font-size: 0.9rem; margin-top: 10px;">Parcourez notre récolte pour y ajouter des pots de miel.</p>
+                <button class="btn btn-secondary" style="margin-top: 25px;" id="btn-continue-shopping">Découvrir les miels</button>
+            </div>
+            
+            <div id="cart-items-container" style="display: none;">
+                <div class="cart-info-banner">
+                    <span class="info-banner-icon">⚠️</span>
+                    <div class="info-banner-text">
+                        <strong>Panier de réservation uniquement :</strong> aucun paiement en ligne. Vos produits sont réservés pour un retrait sur place, avec règlement final lors du retrait.
+                    </div>
+                </div>
+                
+                <div class="cart-items-list" id="cart-items-list">
+                    <!-- Items inserted by JS -->
+                </div>
+                
+                <div class="cart-summary">
+                    <div class="summary-row">
+                        <span>Poids total :</span>
+                        <span id="cart-total-weight">0 kg</span>
+                    </div>
+                    <div class="summary-row">
+                        <span>Nombre de pots :</span>
+                        <span id="cart-total-pots">0</span>
+                    </div>
+                    <div class="summary-row summary-total">
+                        <span>Total de votre réservation :</span>
+                        <span id="cart-total-price">0,00 €</span>
+                    </div>
+                </div>
+                
+                <div class="payment-methods-notice">
+                    <h4>Moyens de paiement acceptés au retrait :</h4>
+                    <div class="payment-badges">
+                        <span class="payment-badge"><span class="badge-icon">💵</span> Espèces</span>
+                        <span class="payment-badge"><span class="badge-icon">📝</span> Chèque</span>
+                        <span class="payment-badge"><span class="badge-icon">📱</span> Wero / Paylib</span>
+                    </div>
+                    <p class="payment-subtext">Aucun paiement en ligne • Le règlement s'effectue lors du retrait</p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- STEP 2 : RESERVATION DETAILS FORM -->
+        <div class="cart-body reservation-step" id="cart-step-form">
+            <h3 style="font-size: 1.4rem; margin-bottom: 20px; font-family: var(--font-body); font-weight:600;">Coordonnées de réservation</h3>
+            
+            <div class="pickup-info-card">
+                <h4>📍 Point de retrait unique</h4>
+                <p>Le retrait s'effectue directement sur place au Rucher : <br><strong>__RUCHER_STREET__, __RUCHER_ZIP__ __RUCHER_CITY__</strong></p>
+            </div>
+            
+            <form id="reservation-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="client-lastname" class="form-label">Nom *</label>
+                        <input type="text" id="client-lastname" class="form-input" placeholder="Dupont" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="client-firstname" class="form-label">Prénom *</label>
+                        <input type="text" id="client-firstname" class="form-input" placeholder="Jean" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="client-phone" class="form-label">Téléphone de contact *</label>
+                    <input type="tel" id="client-phone" class="form-input" placeholder="06 12 34 56 78" required>
+                </div>
+                
+                <div class="form-group">
+                    <label for="client-email" class="form-label">Adresse e-mail *</label>
+                    <input type="email" id="client-email" class="form-input" placeholder="jean.dupont@email.com" required>
+                </div>
+                
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="pickup-date" class="form-label">Date souhaitée *</label>
+                        <input type="date" id="pickup-date" class="form-input" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="pickup-time" class="form-label">Heure souhaitée *</label>
+                        <input type="time" id="pickup-time" class="form-input" required>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label for="client-notes" class="form-label">Message ou précision (optionnel)</label>
+                    <textarea id="client-notes" class="form-input" rows="3" placeholder="Ex: Précision sur l'heure, demande particulière..."></textarea>
+                </div>
+                
+                <!-- Encart de Paiement et RGPD Stylisé -->
+                <div class="checkout-info-block">
+                    <div class="payment-methods-card">
+                        <h4>💶 Règlement lors du retrait</h4>
+                        <div class="payment-badges-list">
+                            <div class="payment-badge-item">
+                                <span class="badge-tag">Espèces 💵</span>
+                                <span class="badge-desc">Prévoyez l'appoint si possible</span>
+                            </div>
+                            <div class="payment-badge-item">
+                                <span class="badge-tag">Chèque 📝</span>
+                                <span class="badge-desc">À l'ordre de Marine Morard</span>
+                            </div>
+                            <div class="payment-badge-item">
+                                <span class="badge-tag">Wero / Paylib 📱</span>
+                                <span class="badge-desc">Virement mobile instantané</span>
+                            </div>
+                        </div>
+                        <p class="payment-warning-text">⚠️ Aucun paiement ne s'effectue en ligne sur ce site.</p>
+                    </div>
+                    
+                    <div class="rgpd-notice-card">
+                        <span class="rgpd-icon">🔒</span>
+                        <p><strong>Confidentialité :</strong> Vos données sont traitées conformément à notre <a href="politique-confidentialite.html" target="_blank" style="text-decoration: underline; color: var(--secondary);">politique de confidentialité</a> et servent exclusivement à gérer votre retrait.</p>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+        <!-- FOOTER FOR BUTTONS -->
+        <div class="cart-footer" id="cart-footer" style="display: none;">
+            <!-- Buttons for Step 1 -->
+            <div id="footer-actions-step-list">
+                <button class="btn btn-primary checkout-btn" id="btn-go-to-checkout">
+                    <span>Valider ma sélection</span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
+                </button>
+            </div>
+            
+            <!-- Buttons for Step 2 -->
+            <div id="footer-actions-step-form" style="display: none;">
+                <div class="reservation-actions">
+                    <button class="btn btn-secondary" id="btn-back-to-list" style="padding: 14px 10px;">Retour</button>
+                    <span style="font-weight: 700; display: flex; align-items: center; justify-content: flex-end; font-size: 1.15rem;" id="checkout-total-price">0,00 €</span>
+                </div>
+                
+                <div class="action-buttons-wrap">
+                    <button type="submit" form="reservation-form" class="btn submit-whatsapp-btn" id="btn-submit-whatsapp">
+                        <span>Réserver par WhatsApp 💬</span>
+                    </button>
+                    <button type="submit" form="reservation-form" class="btn submit-email-btn" id="btn-submit-email">
+                        <span>Réserver par E-mail ✉️</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- SUCCESS MODAL -->
+    <div class="success-overlay" id="success-overlay">
+        <div class="success-card">
+            <div class="success-icon-wrap">🍯</div>
+            <h3>Réservation préparée !</h3>
+            <p>Votre message de réservation a été généré avec succès. Afin de valider définitivement la commande, veuillez envoyer le message via l'application ouverte.</p>
+            
+            <div class="success-details">
+                <div class="success-details-title">Récapitulatif du retrait</div>
+                <ul>
+                    <li><span>Lieu :</span><strong>__RUCHER_STREET__, __RUCHER_CITY__</strong></li>
+                    <li><span>Date :</span><strong id="success-date">-</strong></li>
+                    <li><span>Heure :</span><strong id="success-time">-</strong></li>
+                    <li><span>Total :</span><strong id="success-price">-</strong></li>
+                    <li><span>Paiement :</span><strong>Espèces, Chèque ou Wero</strong></li>
+                </ul>
+            </div>
+            
+            <button class="btn btn-primary" id="btn-close-success" style="width: 100%;">Retourner au site</button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <div class="footer-logo">
+                    <span class="logo-icon">🐝</span>
+                    <span class="footer-logo-text">Le Rucher <span>d'Hantael</span></span>
+                </div>
+                <ul class="footer-nav">
+                    <li><a href="index.html">Accueil</a></li>
+                    <li><a href="index.html#histoire">Notre Histoire</a></li>
+                    <li><a href="index.html#miels">Nos Miels</a></li>
+                    <li><a href="index.html#contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-bottom" style="flex-direction: column; gap: 10px; align-items: center; text-align: center;">
+                <p style="color: var(--primary); font-weight: 600; font-size: 0.95rem;">&copy; 2026 Le Rucher d'Hantael. Gérante : Marine Morard. Tous droits réservés.</p>
+                <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.95);">Miel 100% récolté et mis en pot à Orphin (Yvelines, France) — TVA non applicable, art. 293 B du CGI</p>
+                <p style="font-size: 0.85rem; color: rgba(255, 255, 255, 0.75); margin-top: 5px;">Conçu localement pour le respect des abeilles 💛</p>
+                <p style="margin-top: 5px; display: flex; justify-content: center; gap: 15px; flex-wrap: wrap;">
+                    <a href="#" id="open-legal" style="font-size: 0.85rem; color: var(--text-light-muted); text-decoration: underline; transition: color var(--transition-smooth);">Mentions Légales</a>
+                    <span style="color: var(--text-light-muted); font-size: 0.85rem;">|</span>
+                    <a href="politique-confidentialite.html" style="font-size: 0.85rem; color: var(--text-light-muted); text-decoration: underline; transition: color var(--transition-smooth);">Politique de confidentialité</a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- MENTIONS LEGALES MODAL -->
+    <div class="legal-overlay" id="legal-overlay">
+        <div class="legal-card">
+            <button class="legal-close" id="close-legal" aria-label="Fermer les mentions légales">&times;</button>
+            <div class="legal-content">
+                <h3>Mentions Légales</h3>
+                
+                <h4>Éditeur du site</h4>
+                <p>
+                    <strong>Le Rucher d'Hantael</strong><br>
+                    Propriétaire & Directrice de la publication : Marine Morard<br>
+                    Adresse : __RUCHER_STREET__, __RUCHER_ZIP__ __RUCHER_CITY__<br>
+                    E-mail : __RUCHER_EMAIL__<br>
+                    Téléphone : __RUCHER_PHONE_FORMATTED__
+                </p>
+                
+                <h4>Immatriculation</h4>
+                <p>
+                    Numéro SIRET : __RUCHER_SIRET__<br>
+                    Régime : Micro-entreprise agricole (TVA non applicable, art. 293 B du CGI)
+                </p>
+                
+                <h4>Hébergement</h4>
+                <p>
+                    Le site est hébergé par :<br>
+                    <strong>Infomaniak Network SA</strong><br>
+                    Adresse : Rue Eugène-Marziano 25, 1227 Les Acacias, Genève, Suisse<br>
+                    Téléphone : +41 22 820 35 44<br>
+                    Site web : <a href="https://www.infomaniak.com" target="_blank" rel="noopener noreferrer" style="color: var(--primary); text-decoration: underline;">www.infomaniak.com</a>
+                </p>
+                
+                <h4>Propriété intellectuelle</h4>
+                <p>
+                    L'ensemble des contenus de ce site (textes, photographies, logos) est protégé par les lois en vigueur relatives à la propriété intellectuelle. Toute reproduction ou représentation, intégrale ou partielle, est interdite sans l'accord préalable de l'éditeur.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <!-- CHATBOT WIDGET -->
+    <!-- Bouton flottant -->
+    <div class="chatbot-trigger" id="chatbot-trigger" aria-label="Ouvrir l'assistant virtuel">
+        <span class="chatbot-icon">💬</span>
+        <span class="chatbot-pulse"></span>
+    </div>
+
+    <!-- Fenêtre de chat -->
+    <div class="chatbot-window" id="chatbot-window">
+        <div class="chatbot-header">
+            <div class="chatbot-header-info">
+                <span class="chatbot-header-avatar">🐝</span>
+                <div>
+                    <h4 style="margin: 0; color: white;">L'Assistant du Rucher</h4>
+                    <span class="chatbot-status" style="font-size: 0.75rem; opacity: 0.85;">En ligne • Réponse instantanée</span>
+                </div>
+            </div>
+            <button class="chatbot-close" id="chatbot-close" style="background: none; border: none; color: white; font-size: 1.5rem; cursor: pointer;">&times;</button>
+        </div>
+        
+        <div class="chatbot-messages" id="chatbot-messages">
+            <!-- Messages chargés par JS -->
+        </div>
+        
+        <div class="chatbot-input-area">
+            <input type="text" id="chatbot-input" placeholder="Posez une question (ex: horaires, tarifs...)" aria-label="Votre question">
+            <button id="chatbot-send" aria-label="Envoyer">
+                <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- JavaScript -->
+    <script src="js/app.js"></script>
+</body>
+</html>

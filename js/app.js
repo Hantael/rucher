@@ -276,7 +276,7 @@ function closeCartDrawer() {
 }
 
 function showCartStepList() {
-    document.getElementById('cart-title').textContent = 'Votre Panier 🍯';
+    document.getElementById('cart-title').textContent = 'Votre Panier de Réservation 🍯';
     document.getElementById('cart-step-list').classList.add('active');
     document.getElementById('cart-step-list').style.display = 'block';
     
@@ -288,7 +288,7 @@ function showCartStepList() {
 }
 
 function showCartStepCheckout() {
-    document.getElementById('cart-title').textContent = 'Finaliser 🐝';
+    document.getElementById('cart-title').textContent = 'Finaliser la Réservation 🐝';
     document.getElementById('cart-step-list').classList.remove('active');
     document.getElementById('cart-step-list').style.display = 'none';
     
@@ -588,7 +588,7 @@ function setupMobileMenu() {
 // ==========================================================================
 
 const CHATBOT_FAQ = {
-    welcome: "Bonjour ! 🐝 Je suis l'assistant virtuel du Rucher d'Hantael. Comment puis-je vous aider aujourd'hui ?",
+    welcome: "Bonjour ! 🐝 Je suis l'assistant virtuel du Rucher d'Hantael. Comment puis-je vous aider ?\n\n*(Note : ce site est une vitrine de réservation, aucun paiement ne s'effectue en ligne)*",
     menu: [
         { text: "🍯 Miels et Tarifs", action: "miels" },
         { text: "📍 Retrait et Horaires", action: "retrait" },
@@ -607,7 +607,7 @@ const CHATBOT_FAQ = {
             menu: ["miels", "paiements", "contact"]
         },
         paiements: {
-            text: "💳 **Moyens de paiement acceptés :**\n\nPour simplifier votre retrait (nous n'avons pas de terminal de paiement pour carte bancaire) :\n\n• **Espèces**\n• **Chèque** (à l'ordre de Marine Morard)\n• **Wero / Paylib** (virement instantané par mobile sur le numéro de Marine : **__RUCHER_PHONE_FORMATTED__**)",
+            text: "💳 **Moyens de paiement acceptés :**\n\nLe site fonctionne uniquement par **réservation en ligne gratuite**. Aucun paiement n'est requis en ligne.\n\nLe règlement se fait **sur place lors du retrait** de vos pots. Nous acceptons :\n\n• **Espèces** (de préférence avec l'appoint)\n• **Chèque** (à l'ordre de Marine Morard)\n• **Wero / Paylib** (virement instantané par mobile vers le numéro : **__RUCHER_PHONE_FORMATTED__**)\n\n*(Note : pas de terminal de paiement CB sur place)*",
             menu: ["miels", "retrait", "contact"]
         },
         essaims: {

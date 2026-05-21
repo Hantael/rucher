@@ -42,7 +42,11 @@ def main():
     print(f"Exécution du remplacement des secrets dans : {workspace}")
     
     replace_in_file(os.path.join(workspace, "index.html"), mapping)
+    replace_in_file(os.path.join(workspace, "miel-printemps.html"), mapping)
+    replace_in_file(os.path.join(workspace, "miel-ete.html"), mapping)
+    replace_in_file(os.path.join(workspace, "politique-confidentialite.html"), mapping)
     replace_in_file(os.path.join(workspace, "js", "app.js"), mapping)
+
     
 if __name__ == "__main__":
     main()

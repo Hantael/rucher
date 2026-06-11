@@ -2024,14 +2024,14 @@ button, input, textarea, select {
 }
 
 .product-detail-img-box {
-    background-color: var(--bg-white);
-    border: 1px solid var(--border-color);
-    border-radius: var(--radius-md);
+    background-color: transparent;
+    border: none;
+    border-radius: var(--radius-lg) 0 0 var(--radius-lg);
     padding: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: var(--shadow-sm);
+    box-shadow: none;
     overflow: hidden;
     position: relative;
     height: 100%;
@@ -2257,12 +2257,13 @@ button, input, textarea, select {
     }
     
     .product-detail-img-box {
-        padding: 20px;
-        height: 320px;
+        padding: 0;
+        height: 350px;
+        border-radius: var(--radius-lg) var(--radius-lg) 0 0;
     }
     
     .product-detail-img {
-        object-fit: contain;
+        object-fit: cover;
     }
     
     .privacy-container {

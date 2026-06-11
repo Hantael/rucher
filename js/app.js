@@ -438,24 +438,24 @@ function setupReservationHandlers() {
                 totalPots += item.qty;
             });
             
-            const messageTitle = `🐝 Réservation de Miel - Le Rucher d'Hantael`;
+            const messageTitle = `\u{1F41D} Réservation de Miel - Le Rucher d'Hantael`;
             const messageBody = `Bonjour Le Rucher d'Hantael,
 
 Je souhaite réserver du miel pour un retrait sur place.
 
-📦 Détail de la réservation :
+\u{1F4E6} Détail de la réservation :
 ${orderSummary}
-👉 Total : ${total.toFixed(2)}€ (${totalPots} pots)
+\u{1F449} Total : ${total.toFixed(2)}€ (${totalPots} pots)
 
-👤 Coordonnées du client :
+\u{1F464} Coordonnées du client :
 - Nom : ${client.lastname.toUpperCase()} ${client.firstname}
 - Téléphone : ${client.phone}
 - E-mail : ${client.email}
 
-📅 Retrait souhaité :
+\u{1F4C5} Retrait souhaité :
 - Le : ${formattedDate}
 - Vers : ${client.time}
-${client.notes ? `\n💬 Note complémentaire :\n"${client.notes}"` : ''}
+${client.notes ? `\n\u{1F4AC} Note complémentaire :\n"${client.notes}"` : ''}
 
 Merci et à bientôt !`;
             

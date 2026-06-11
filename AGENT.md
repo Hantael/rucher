@@ -17,7 +17,10 @@ Le site est entièrement statique et fonctionne 100% côté client, garantissant
 ```text
 rucher_site/
 ├── AGENT.md                  # Cette documentation (référencée par GEMINI.md et CLAUDE.md)
-├── index.html                # Structure de la page, SEO, contenu textuel et formulaires
+├── index.html                # Page d'accueil, catalogue et formulaire de réservation
+├── miel-printemps.html       # Fiche produit détaillée du Miel de Printemps (Disponible)
+├── miel-ete.html             # Fiche produit détaillée du Miel d'Été (Épuisé)
+├── politique-confidentialite.html # Politique de confidentialité & explications localStorage
 ├── 404.html                  # Page de redirection en cas d'erreur 404 (GitHub Pages)
 ├── .htaccess                 # Configuration Apache pour redirection 404 (Infomaniak)
 ├── robots.txt                # Fichier d'instructions pour les moteurs de recherche
@@ -86,8 +89,11 @@ Pour configurer GitHub Pages pour ce workflow :
 
 ## 🌟 Fonctionnalités Implémentées
 
-- **SEO Ready** : Meta tags configurés pour les moteurs de recherche et le partage sur les réseaux sociaux (Open Graph).
-- **Responsive Web Design** : Optimisé pour mobile, tablette et écrans larges de bureau.
-- **Panier d'achat local** : Sauvegarde automatique de la sélection de l'utilisateur dans son navigateur en cas de rafraîchissement.
-- **Redirection de Commande** : Génère un récapitulatif formaté complet à envoyer en un clic au rucher.
-- **Accessibilité (A11y)** : Utilisation d'éléments sémantiques HTML5 et de contrastes conformes aux recommandations modernes.
+- **SEO & Rich Snippets (Schema.org)** : Balisage JSON-LD structuré et validé pour les fiches produits (type `Product`). Résolution des avertissements Google Merchant Center avec l'intégration des frais de livraison (`shippingDetails` via `OfferShippingDetails`), de la politique de retour (`hasMerchantReturnPolicy` via `MerchantReturnPolicy`), ainsi que de notes (`aggregateRating`) et d'avis clients (`review`).
+- **Fiches Produits Détaillées** : Pages individuelles pour chaque miel (`miel-printemps.html` & `miel-ete.html`) utilisant un affichage divisé (split grid) moderne. L'image occupe toute la partie gauche (full-bleed) avec des ajustements spécifiques pour le mode mobile (image limitée à 350px de haut et coins arrondis supérieurs).
+- **Politique de Confidentialité & RGPD** : Page dédiée (`politique-confidentialite.html`) pour informer les utilisateurs du stockage local de leur panier (`localStorage`) sans recours à des cookies de pistage.
+- **Panier d'achat local** : Sauvegarde automatique de la sélection de l'utilisateur dans son navigateur via `localStorage` (avec synchronisation instantanée entre la page d'accueil et les fiches produits).
+- **Redirection de Commande** : Génère un récapitulatif complet et formaté prêt à l'envoi vers le rucher via WhatsApp ou E-mail en un clic.
+- **Design System Premium** : Charte graphique soignée avec des variables de couleurs HSL harmonieuses, typographies soignées, micro-animations sur les boutons et les cartes de produits.
+- **Cache-Busting** : Intégration d'un paramètre de version sur la feuille de style principale (`css/style.css?v=1.3`) pour éviter les problèmes de cache navigateur lors des mises à jour graphiques.
+- **Accessibilité (A11y)** : Contrastes de couleurs vérifiés et balises sémantiques HTML5 structurées pour une meilleure compatibilité avec les lecteurs d'écran.

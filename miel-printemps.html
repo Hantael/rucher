@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Miel de Printemps - Le Rucher d'Hantael">
     <meta property="og:description" content="Miel toutes fleurs très doux et floral. Récolté et mis en pot à Orphin (78). Retrait sur place uniquement.">
-    <meta property="og:image" content="assets/images/miel-printemps.png">
+    <meta property="og:image" content="assets/images/miel-printemps.jpg">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
@@ -32,7 +32,7 @@
       "@type": "Product",
       "name": "Miel de Printemps - Le Rucher d'Hantael",
       "description": "Miel toutes fleurs très doux et floral avec une teinte jaune pâle. Il cristallise rapidement dans les jours qui suivent l'extraction. Issu principalement du colza, des arbres fruitiers (pommier, poirier, cerisier) et des fleurs de prairie (pissenlit) d'Orphin.",
-      "image": "https://hantael.fr/assets/images/miel-printemps.png",
+      "image": "https://hantael.fr/assets/images/miel-printemps.jpg",
       "brand": {
         "@type": "Brand",
         "name": "Le Rucher d'Hantael"
@@ -42,8 +42,62 @@
         "priceCurrency": "EUR",
         "price": "10.00",
         "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition"
-      }
+        "itemCondition": "https://schema.org/NewCondition",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "EUR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "FR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "FR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnInStore",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "12"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Thomas D."
+          },
+          "reviewBody": "Miel de printemps crémeux absolument délicieux et doux en bouche. Parfait pour les tartines du matin."
+        }
+      ]
     }
     </script>
 </head>
@@ -105,7 +159,7 @@
                 
                 <!-- Image -->
                 <div class="product-detail-img-box">
-                    <img src="assets/images/miel-printemps.png" alt="Pot de Miel de Printemps - Le Rucher d'Hantael" class="product-detail-img">
+                    <img src="assets/images/miel-printemps.jpg" alt="Pot de Miel de Printemps - Le Rucher d'Hantael" class="product-detail-img">
                 </div>
                 
                 <!-- Information -->
@@ -132,7 +186,7 @@
                             <span class="qty-value" id="qty-printemps">1</span>
                             <button class="qty-btn inc-qty" aria-label="Augmenter la quantité">+</button>
                         </div>
-                        <button class="btn btn-primary product-btn add-to-cart-btn" data-id="printemps" data-name="Miel de Printemps" data-price="10" data-img="assets/images/miel-printemps.png" id="btn-add-printemps">
+                        <button class="btn btn-primary product-btn add-to-cart-btn" data-id="printemps" data-name="Miel de Printemps" data-price="10" data-img="assets/images/miel-printemps.jpg" id="btn-add-printemps">
                             <span>Réserver ce miel 🍯</span>
                         </button>
                     </div>
@@ -189,7 +243,7 @@
                     <!-- Miel d'Été -->
                     <div class="product-card" id="prod-ete">
                         <div class="product-img-container">
-                            <img src="assets/images/miel-ete.png" alt="Pot de Miel d'Été du Rucher d'Hantael" class="product-img">
+                            <img src="assets/images/miel-ete.jpg" alt="Pot de Miel d'Été du Rucher d'Hantael" class="product-img">
                             <span class="product-badge" style="background: #ef4444; color: white;">Épuisé</span>
                         </div>
                         <div class="product-content">

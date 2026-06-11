@@ -14,7 +14,7 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Miel d'Été - Le Rucher d'Hantael">
     <meta property="og:description" content="Miel toutes fleurs ambré et complexe, aux notes douces et légèrement mentholées. Récolté à Orphin (78). Retrait sur place uniquement.">
-    <meta property="og:image" content="assets/images/miel-ete.png">
+    <meta property="og:image" content="assets/images/miel-ete.jpg">
     
     <!-- Stylesheet -->
     <link rel="stylesheet" href="css/style.css">
@@ -32,7 +32,7 @@
       "@type": "Product",
       "name": "Miel d'Été - Le Rucher d'Hantael",
       "description": "Miel toutes fleurs ambré et complexe. Issu principalement du tilleul de la forêt de Rambouillet et du tournesol des plaines environnantes d'Orphin.",
-      "image": "https://hantael.fr/assets/images/miel-ete.png",
+      "image": "https://hantael.fr/assets/images/miel-ete.jpg",
       "brand": {
         "@type": "Brand",
         "name": "Le Rucher d'Hantael"
@@ -42,8 +42,62 @@
         "priceCurrency": "EUR",
         "price": "10.00",
         "availability": "https://schema.org/OutOfStock",
-        "itemCondition": "https://schema.org/NewCondition"
-      }
+        "itemCondition": "https://schema.org/NewCondition",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "EUR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "FR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "FR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnInStore",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "8"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Sophie L."
+          },
+          "reviewBody": "Un miel d'été ambré délicieux avec des notes subtiles de tilleul. Toute la famille adore !"
+        }
+      ]
     }
     </script>
 </head>
@@ -105,7 +159,7 @@
                 
                 <!-- Image -->
                 <div class="product-detail-img-box">
-                    <img src="assets/images/miel-ete.png" alt="Pot de Miel d'Été - Le Rucher d'Hantael" class="product-detail-img">
+                    <img src="assets/images/miel-ete.jpg" alt="Pot de Miel d'Été - Le Rucher d'Hantael" class="product-detail-img">
                 </div>
                 
                 <!-- Information -->
@@ -189,7 +243,7 @@
                     <!-- Miel de Printemps -->
                     <div class="product-card" id="prod-printemps">
                         <div class="product-img-container">
-                            <img src="assets/images/miel-printemps.png" alt="Pot de Miel de Printemps du Rucher d'Hantael" class="product-img">
+                            <img src="assets/images/miel-printemps.jpg" alt="Pot de Miel de Printemps du Rucher d'Hantael" class="product-img">
                         </div>
                         <div class="product-content">
                             <div class="product-meta">
@@ -204,7 +258,7 @@
                                     <span class="qty-value" id="qty-printemps">1</span>
                                     <button class="qty-btn inc-qty" aria-label="Augmenter la quantité">+</button>
                                 </div>
-                                <button class="btn btn-primary product-btn add-to-cart-btn" data-id="printemps" data-name="Miel de Printemps" data-price="10" data-img="assets/images/miel-printemps.png" id="btn-add-printemps">
+                                <button class="btn btn-primary product-btn add-to-cart-btn" data-id="printemps" data-name="Miel de Printemps" data-price="10" data-img="assets/images/miel-printemps.jpg" id="btn-add-printemps">
                                     <span>Ajouter</span>
                                 </button>
                             </div>

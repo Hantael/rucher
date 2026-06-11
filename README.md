@@ -12,9 +12,11 @@ Ce site moderne, rapide et entièrement responsive permet aux clients de découv
 - **Réservation sans serveur** : Pour un maximum de simplicité et de gratuité d'hébergement, le site génère un récapitulatif formaté complet et redirige le client pour envoyer sa commande en un clic :
   - Soit par **WhatsApp 💬** (message pré-rédigé vers le téléphone du rucher).
   - Soit par **E-mail ✉️** (mailto pré-rempli).
-- **Design System Premium** : Palette chaleureuse (or ambré, blanc crème, ardoise sombre), polices soignées (*Outfit* et *Playfair Display*) et micro-animations.
-- **Responsive** : Parfaitement adapté pour smartphone, tablette et ordinateur de bureau.
-- **SEO & Performance** : Optimisé pour les moteurs de recherche avec des meta-tags complets et un temps de chargement instantané (100% côté client).
+- **Fiches produits détaillées** : Pages dédiées pour chaque miel (`miel-printemps.html` et `miel-ete.html`) avec design "split-view" immersif (image full-bleed sur la moitié gauche, description, tarifs et action d'achat sur la droite), entièrement intégrées au panier global.
+- **Design System Premium** : Palette chaleureuse (or ambré, blanc crème, ardoise sombre), polices soignées (*Outfit* et *Playfair Display*) et micro-animations fluides.
+- **Responsive** : Parfaitement adapté pour smartphone (optimisation mobile de la hauteur des images à 350px et coins arrondis fluides), tablette et ordinateur de bureau.
+- **SEO & Données Structurées** : Optimisation poussée pour les moteurs de recherche avec balisage JSON-LD Schema.org `Product` résolvant les exigences Google Merchant Center (livraison `shippingDetails`, retour `hasMerchantReturnPolicy`, avis `review` et note `aggregateRating`).
+- **Politique de Confidentialité & RGPD** : Page dédiée (`politique-confidentialite.html`) expliquant de manière transparente la persistance locale du panier via `localStorage` sans cookies tiers.
 
 ---
 
@@ -29,7 +31,10 @@ rucher_site/
 ├── .github/
 │   ├── workflows/            # Pipelines CI/CD (GitHub Pages + FTP Infomaniak)
 │   └── scripts/              # Script de déploiement FTP (deploy_ftp.py)
-├── index.html                # Structure de la page, SEO (JSON-LD), contenu textuel et formulaires
+├── index.html                # Structure de la page principale, SEO, catalogue et formulaires
+├── miel-printemps.html       # Page produit détaillée : Miel de Printemps
+├── miel-ete.html             # Page produit détaillée : Miel d'Été
+├── politique-confidentialite.html # Politique de confidentialité & conformité RGPD
 ├── 404.html                  # Page de redirection en cas d'erreur 404 (GitHub Pages)
 ├── .htaccess                 # Configuration Apache pour redirection 404 (Infomaniak)
 ├── robots.txt                # Fichier d'instructions pour les moteurs de recherche

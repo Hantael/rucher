@@ -2,6 +2,12 @@
 
 Ce projet a été généré et structuré avec l'assistance d'agents IA (**Gemini/Antigravity** et **Claude/Cursor**). Ce fichier regroupe toutes les informations utiles pour maintenir, modifier et héberger le site web statique du rucher.
 
+> [!IMPORTANT]
+> **Flux de travail Multi-Agents (Gemini & Claude) :**
+> * Le fichier `AGENT.md` est la source unique de vérité pour la documentation et les consignes de développement.
+> * `GEMINI.md` et `CLAUDE.md` sont des **liens physiques (hard links)** pointant vers `AGENT.md`.
+> * **Consigne pour les agents IA :** Toujours éditer `AGENT.md` directement. Ne supprimez pas et ne recréez pas les fichiers `GEMINI.md` et `CLAUDE.md` sous forme de fichiers simples afin de préserver le lien physique et l'accès natif de chaque assistant.
+
 ---
 
 ## 📁 Architecture du Projet
@@ -11,7 +17,10 @@ Le site est entièrement statique et fonctionne 100% côté client, garantissant
 ```text
 rucher_site/
 ├── AGENT.md                  # Cette documentation (référencée par GEMINI.md et CLAUDE.md)
-├── index.html                # Structure de la page, SEO, contenu textuel et formulaires
+├── index.html                # Page d'accueil, catalogue et formulaire de réservation
+├── miel-printemps.html       # Fiche produit détaillée du Miel de Printemps (Disponible)
+├── miel-ete.html             # Fiche produit détaillée du Miel d'Été (Épuisé)
+├── politique-confidentialite.html # Politique de confidentialité & explications localStorage
 ├── 404.html                  # Page de redirection en cas d'erreur 404 (GitHub Pages)
 ├── .htaccess                 # Configuration Apache pour redirection 404 (Infomaniak)
 ├── robots.txt                # Fichier d'instructions pour les moteurs de recherche
@@ -23,8 +32,8 @@ rucher_site/
 └── assets/
     └── images/
         ├── hero-bg.png       # Arrière-plan de la section Hero
-        ├── miel-printemps.png# Visuel du pot de Miel de Printemps (500g)
-        └── miel-ete.png      # Visuel du pot de Miel d'Été (500g)
+        ├── miel-printemps.jpg# Visuel du pot de Miel de Printemps (500g)
+        └── miel-ete.jpg      # Visuel du pot de Miel d'Été (500g)
 ```
 
 ---
@@ -63,10 +72,10 @@ Si le tarif d'un miel évolue (par exemple à 11 €), modifiez la valeur `price
 Le site est déployé de manière entièrement automatisée grâce à **GitHub Actions** à chaque mise à jour sur le dépôt.
 
 ### 1. Pré-production / Tests (GitHub Pages)
-À chaque fois que du code est poussé (sur les branches `main` ou `develop`), le workflow remplace les placeholders par vos secrets GitHub et déploie le site sur **GitHub Pages**.
+À chaque fois que du code est poussé sur la branche **`develop`**, le workflow remplace les placeholders par vos secrets GitHub et déploie le site sur **GitHub Pages**. (La branche `main` ignore cette étape pour éviter les conflits de permissions GitHub Pages).
 
 ### 2. Production (Infomaniak FTP)
-Lorsque du code est poussé ou fusionné sur la branche principale **`main`**, le workflow déploie également les fichiers compilés par FTP vers votre hébergement de production chez Infomaniak.
+Lorsque du code est fusionné ou poussé sur la branche principale **`main`**, le workflow déclenche le déploiement. Il attend votre **validation manuelle** dans l'onglet Actions de GitHub (cliquez sur **Review deployments** puis **Approve and deploy**) avant d'envoyer les fichiers par FTP vers votre hébergement chez Infomaniak.
 
 Pour configurer GitHub Pages pour ce workflow :
 1. Allez sur votre dépôt GitHub : [Hantael/rucher](https://github.com/Hantael/rucher).
@@ -80,8 +89,11 @@ Pour configurer GitHub Pages pour ce workflow :
 
 ## 🌟 Fonctionnalités Implémentées
 
-- **SEO Ready** : Meta tags configurés pour les moteurs de recherche et le partage sur les réseaux sociaux (Open Graph).
-- **Responsive Web Design** : Optimisé pour mobile, tablette et écrans larges de bureau.
-- **Panier d'achat local** : Sauvegarde automatique de la sélection de l'utilisateur dans son navigateur en cas de rafraîchissement.
-- **Redirection de Commande** : Génère un récapitulatif formaté complet à envoyer en un clic au rucher.
-- **Accessibilité (A11y)** : Utilisation d'éléments séman
+- **SEO & Rich Snippets (Schema.org)** : Balisage JSON-LD structuré et validé pour les fiches produits (type `Product`). Résolution des avertissements Google Merchant Center avec l'intégration des frais de livraison (`shippingDetails` via `OfferShippingDetails`), de la politique de retour (`hasMerchantReturnPolicy` via `MerchantReturnPolicy`), ainsi que de notes (`aggregateRating`) et d'avis clients (`review`).
+- **Fiches Produits Détaillées** : Pages individuelles pour chaque miel (`miel-printemps.html` & `miel-ete.html`) utilisant un affichage divisé (split grid) moderne. L'image occupe toute la partie gauche (full-bleed) avec des ajustements spécifiques pour le mode mobile (image limitée à 350px de haut et coins arrondis supérieurs).
+- **Politique de Confidentialité & RGPD** : Page dédiée (`politique-confidentialite.html`) pour informer les utilisateurs du stockage local de leur panier (`localStorage`) sans recours à des cookies de pistage.
+- **Panier d'achat local** : Sauvegarde automatique de la sélection de l'utilisateur dans son navigateur via `localStorage` (avec synchronisation instantanée entre la page d'accueil et les fiches produits).
+- **Redirection de Commande** : Génère un récapitulatif complet et formaté prêt à l'envoi vers le rucher via WhatsApp ou E-mail en un clic.
+- **Design System Premium** : Charte graphique soignée avec des variables de couleurs HSL harmonieuses, typographies soignées, micro-animations sur les boutons et les cartes de produits.
+- **Cache-Busting** : Intégration d'un paramètre de version sur la feuille de style principale (`css/style.css?v=1.3`) pour éviter les problèmes de cache navigateur lors des mises à jour graphiques.
+- **Accessibilité (A11y)** : Contrastes de couleurs vérifiés et balises sémantiques HTML5 structurées pour une meilleure compatibilité avec les lecteurs d'écran.

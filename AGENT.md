@@ -29,8 +29,8 @@ rucher_site/
 └── assets/
     └── images/
         ├── hero-bg.png       # Arrière-plan de la section Hero
-        ├── miel-printemps.png# Visuel du pot de Miel de Printemps (500g)
-        └── miel-ete.png      # Visuel du pot de Miel d'Été (500g)
+        ├── miel-printemps.jpg# Visuel du pot de Miel de Printemps (500g)
+        └── miel-ete.jpg      # Visuel du pot de Miel d'Été (500g)
 ```
 
 ---

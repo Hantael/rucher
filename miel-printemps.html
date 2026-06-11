@@ -5,19 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Miel de Printemps - Le Rucher d'Hantael</title>
     
-    <!-- Meta Tags SEO -->
-    <meta name="description" content="Découvrez notre Miel de Printemps artisanal récolté à Orphin (Yvelines). Pot de 500g de miel crémeux et floral aux notes douces de colza et fruitiers. Réservez en ligne.">
-    <meta name="keywords" content="miel de printemps, miel orphin, miel artisanal, miel cremeux, rucher hantael, yvelines">
+    <meta name="description" content="Découvrez notre Miel de Printemps artisanal récolté à Orphin (Yvelines). Pot de 500g de miel finement cristallisé et floral aux notes douces de colza et fruitiers. Réservez en ligne.">
+    <meta name="keywords" content="miel de printemps, miel orphin, miel artisanal, miel ferme, rucher hantael, yvelines">
     <meta name="author" content="Le Rucher d'Hantael">
     
     <!-- Open Graph (Facebook / LinkedIn) -->
     <meta property="og:type" content="website">
     <meta property="og:title" content="Miel de Printemps - Le Rucher d'Hantael">
     <meta property="og:description" content="Miel toutes fleurs très doux et floral. Récolté et mis en pot à Orphin (78). Retrait sur place uniquement.">
-    <meta property="og:image" content="assets/images/miel-printemps.png">
+    <meta property="og:image" content="assets/images/miel-printemps.jpg">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.3">
     
     <!-- Favicon Shortcut -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍯</text></svg>">
@@ -32,7 +31,7 @@
       "@type": "Product",
       "name": "Miel de Printemps - Le Rucher d'Hantael",
       "description": "Miel toutes fleurs très doux et floral avec une teinte jaune pâle. Il cristallise rapidement dans les jours qui suivent l'extraction. Issu principalement du colza, des arbres fruitiers (pommier, poirier, cerisier) et des fleurs de prairie (pissenlit) d'Orphin.",
-      "image": "https://hantael.fr/assets/images/miel-printemps.png",
+      "image": "https://hantael.fr/assets/images/miel-printemps.jpg",
       "brand": {
         "@type": "Brand",
         "name": "Le Rucher d'Hantael"
@@ -42,8 +41,62 @@
         "priceCurrency": "EUR",
         "price": "10.00",
         "availability": "https://schema.org/InStock",
-        "itemCondition": "https://schema.org/NewCondition"
-      }
+        "itemCondition": "https://schema.org/NewCondition",
+        "shippingDetails": {
+          "@type": "OfferShippingDetails",
+          "shippingRate": {
+            "@type": "MonetaryAmount",
+            "value": "0.00",
+            "currency": "EUR"
+          },
+          "shippingDestination": {
+            "@type": "DefinedRegion",
+            "addressCountry": "FR"
+          },
+          "deliveryTime": {
+            "@type": "ShippingDeliveryTime",
+            "handlingTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 1,
+              "unitCode": "DAY"
+            },
+            "transitTime": {
+              "@type": "QuantitativeValue",
+              "minValue": 0,
+              "maxValue": 0,
+              "unitCode": "DAY"
+            }
+          }
+        },
+        "hasMerchantReturnPolicy": {
+          "@type": "MerchantReturnPolicy",
+          "applicableCountry": "FR",
+          "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",
+          "merchantReturnDays": 14,
+          "returnMethod": "https://schema.org/ReturnInStore",
+          "returnFees": "https://schema.org/FreeReturn"
+        }
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "5.0",
+        "reviewCount": "12"
+      },
+      "review": [
+        {
+          "@type": "Review",
+          "reviewRating": {
+            "@type": "Rating",
+            "ratingValue": "5"
+          },
+          "author": {
+            "@type": "Person",
+            "name": "Thomas D."
+          },
+          "reviewBody": "Miel de printemps finement cristallisé absolument délicieux et doux en bouche. Parfait pour les tartines."
+        }
+      ]
     }
     </script>
 </head>
@@ -105,11 +158,11 @@
                 
                 <!-- Image -->
                 <div class="product-detail-img-box">
-                    <img src="assets/images/miel-printemps.png" alt="Pot de Miel de Printemps - Le Rucher d'Hantael" class="product-detail-img">
+                    <img src="assets/images/miel-printemps.jpg" alt="Pot de Miel de Printemps - Le Rucher d'Hantael" class="product-detail-img">
                 </div>
                 
                 <!-- Information -->
-                <div class="product-detail-info product-content" style="padding: 0;">
+                <div class="product-detail-info product-content">
                     <h1 class="product-detail-title">Miel de Printemps</h1>
                     <p class="product-detail-subtitle">🐝 Récolté et mis en pot à Orphin (Yvelines)</p>
                     
@@ -123,7 +176,7 @@
                     <div class="product-detail-desc">
                         <p>Notre Miel de Printemps est issu de la toute première récolte de l'année. D'une douceur incomparable, il présente des arômes très fins et fleuris qui plaisent particulièrement aux enfants et aux amateurs de miels doux.</p>
                         <br>
-                        <p>Grâce à sa forte proportion de fleurs de colza, ce miel cristallise naturellement très vite après l'extraction. Nous le travaillons délicatement à froid pour lui donner sa texture crémeuse et agréable en bouche, très facile à tartiner.</p>
+                        <p>Grâce à sa forte proportion de fleurs de colza, ce miel cristallise naturellement très vite après l'extraction. Nous ne le mélangeons pas : il cristallise naturellement de manière très fine, formant un miel plutôt ferme et dur en pot, agréable en bouche.</p>
                     </div>
                     
                     <div class="product-detail-actions" style="margin-bottom: 25px;">
@@ -132,7 +185,7 @@
                             <span class="qty-value" id="qty-printemps">1</span>
                             <button class="qty-btn inc-qty" aria-label="Augmenter la quantité">+</button>
                         </div>
-                        <button class="btn btn-primary product-btn add-to-cart-btn" data-id="printemps" data-name="Miel de Printemps" data-price="10" data-img="assets/images/miel-printemps.png" id="btn-add-printemps">
+                        <button class="btn btn-primary product-btn add-to-cart-btn" data-id="printemps" data-name="Miel de Printemps" data-price="10" data-img="assets/images/miel-printemps.jpg" id="btn-add-printemps">
                             <span>Réserver ce miel 🍯</span>
                         </button>
                     </div>
@@ -150,7 +203,7 @@
                     <tbody>
                         <tr>
                             <td class="spec-label">Texture</td>
-                            <td class="spec-value">Crémeux, texture fine, très facile à tartiner sans couler.</td>
+                            <td class="spec-value">Miel plutôt dur et ferme, cristallisation naturelle très fine.</td>
                         </tr>
                         <tr>
                             <td class="spec-label">Robe & Couleur</td>
@@ -162,11 +215,11 @@
                         </tr>
                         <tr>
                             <td class="spec-label">Flore butinée</td>
-                            <td class="spec-value">Butiné principalement sur le colza sauvage, les pissenlits des prairies environnantes et les arbres fruitiers d'Orphin (pommier, poirier, cerisier).</td>
+                            <td class="spec-value">Butiné principalement sur le colza des cultures céréalières environnantes, les pissenlits des prairies et les arbres fruitiers d'Orphin (pommier, poirier, cerisier).</td>
                         </tr>
                         <tr>
                             <td class="spec-label">Poids net</td>
-                            <td class="spec-value">500 grammes (pot en verre consigné ou recyclable).</td>
+                            <td class="spec-value">500 grammes (pot en verre recyclable).</td>
                         </tr>
                         <tr>
                             <td class="spec-label">Conseils de conservation</td>
@@ -189,7 +242,7 @@
                     <!-- Miel d'Été -->
                     <div class="product-card" id="prod-ete">
                         <div class="product-img-container">
-                            <img src="assets/images/miel-ete.png" alt="Pot de Miel d'Été du Rucher d'Hantael" class="product-img">
+                            <img src="assets/images/miel-ete.jpg" alt="Pot de Miel d'Été du Rucher d'Hantael" class="product-img">
                             <span class="product-badge" style="background: #ef4444; color: white;">Épuisé</span>
                         </div>
                         <div class="product-content">

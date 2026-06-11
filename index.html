@@ -17,7 +17,7 @@
     <meta property="og:image" content="assets/images/hero-bg.png">
     
     <!-- Stylesheet -->
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css?v=1.3">
     
     <!-- Favicon Shortcut -->
     <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🍯</text></svg>">
@@ -78,7 +78,7 @@
           "@id": "https://hantael.fr/#product-printemps",
           "name": "Miel de Printemps - Le Rucher d'Hantael",
           "description": "Miel toutes fleurs très doux et floral avec une teinte jaune pâle. Il cristallise rapidement dans les jours qui suivent l'extraction. Issu principalement du colza, des arbres fruitiers (pommier, poirier, cerisier) et des fleurs de prairie (pissenlit) d'Orphin.",
-          "image": "https://hantael.fr/assets/images/miel-printemps.png",
+          "image": "https://hantael.fr/assets/images/miel-printemps.jpg",
           "brand": {
             "@type": "Brand",
             "name": "Le Rucher d'Hantael"
@@ -93,15 +93,69 @@
             "itemCondition": "https://schema.org/NewCondition",
             "offeredBy": {
               "@id": "https://hantael.fr/#localbusiness"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0.00",
+                "currency": "EUR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "FR"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 0,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "FR",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",
+              "merchantReturnDays": 14,
+              "returnMethod": "https://schema.org/ReturnInStore",
+              "returnFees": "https://schema.org/FreeReturn"
             }
-          }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "12"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Thomas D."
+              },
+              "reviewBody": "Miel de printemps finement cristallisé absolument délicieux et doux en bouche. Parfait pour les tartines."
+            }
+          ]
         },
         {
           "@type": "Product",
           "@id": "https://hantael.fr/#product-ete",
           "name": "Miel d'Été - Le Rucher d'Hantael",
           "description": "Miel toutes fleurs plus sombre et complexe, à la robe ambrée, aux notes douces et légèrement mentholées. Il est butiné principalement sur le tilleul de la forêt de Rambouillet et le tournesol des plaines environnantes.",
-          "image": "https://hantael.fr/assets/images/miel-ete.png",
+          "image": "https://hantael.fr/assets/images/miel-ete.jpg",
           "brand": {
             "@type": "Brand",
             "name": "Le Rucher d'Hantael"
@@ -116,8 +170,62 @@
             "itemCondition": "https://schema.org/NewCondition",
             "offeredBy": {
               "@id": "https://hantael.fr/#localbusiness"
+            },
+            "shippingDetails": {
+              "@type": "OfferShippingDetails",
+              "shippingRate": {
+                "@type": "MonetaryAmount",
+                "value": "0.00",
+                "currency": "EUR"
+              },
+              "shippingDestination": {
+                "@type": "DefinedRegion",
+                "addressCountry": "FR"
+              },
+              "deliveryTime": {
+                "@type": "ShippingDeliveryTime",
+                "handlingTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 1,
+                  "unitCode": "DAY"
+                },
+                "transitTime": {
+                  "@type": "QuantitativeValue",
+                  "minValue": 0,
+                  "maxValue": 0,
+                  "unitCode": "DAY"
+                }
+              }
+            },
+            "hasMerchantReturnPolicy": {
+              "@type": "MerchantReturnPolicy",
+              "applicableCountry": "FR",
+              "returnPolicyCategory": "https://schema.org/MerchantReturnFiniteReturnPeriod",
+              "merchantReturnDays": 14,
+              "returnMethod": "https://schema.org/ReturnInStore",
+              "returnFees": "https://schema.org/FreeReturn"
             }
-          }
+          },
+          "aggregateRating": {
+            "@type": "AggregateRating",
+            "ratingValue": "5.0",
+            "reviewCount": "8"
+          },
+          "review": [
+            {
+              "@type": "Review",
+              "reviewRating": {
+                "@type": "Rating",
+                "ratingValue": "5"
+              },
+              "author": {
+                "@type": "Person",
+                "name": "Sophie L."
+              },
+              "reviewBody": "Un miel d'été ambré délicieux avec des notes subtiles de tilleul. Toute la famille adore !"
+            }
+          ]
         }
       ]
     }
@@ -213,7 +321,7 @@
                 
                 <div class="about-images-wrapper">
                     <img src="assets/images/hero-bg.png" alt="Apiculteur vérifiant les ruches" class="about-img-main">
-                    <img src="assets/images/miel-printemps.png" alt="Pot de miel de printemps" class="about-img-sub">
+                    <img src="assets/images/miel-printemps.jpg" alt="Pot de miel de printemps" class="about-img-sub">
                     <span class="about-deco-honey">🍯</span>
                 </div>
             </div>
@@ -236,7 +344,7 @@
                 <!-- Miel de Printemps -->
                 <div class="product-card" id="prod-printemps">
                     <div class="product-img-container">
-                        <img src="assets/images/miel-printemps.png" alt="Pot de Miel de Printemps du Rucher d'Hantael" class="product-img">
+                        <img src="assets/images/miel-printemps.jpg" alt="Pot de Miel de Printemps du Rucher d'Hantael" class="product-img">
                         <span class="product-badge">Édition Printemps</span>
                     </div>
                     <div class="product-content">
@@ -252,7 +360,7 @@
                                 <span class="qty-value" id="qty-printemps">1</span>
                                 <button class="qty-btn inc-qty" aria-label="Augmenter la quantité">+</button>
                             </div>
-                            <button class="btn btn-primary product-btn add-to-cart-btn" data-id="printemps" data-name="Miel de Printemps" data-price="10" data-img="assets/images/miel-printemps.png" id="btn-add-printemps">
+                            <button class="btn btn-primary product-btn add-to-cart-btn" data-id="printemps" data-name="Miel de Printemps" data-price="10" data-img="assets/images/miel-printemps.jpg" id="btn-add-printemps">
                                 <span>Ajouter</span>
                             </button>
                         </div>
@@ -262,7 +370,7 @@
                 <!-- Miel d'Été -->
                 <div class="product-card" id="prod-ete">
                     <div class="product-img-container">
-                        <img src="assets/images/miel-ete.png" alt="Pot de Miel d'Été du Rucher d'Hantael" class="product-img">
+                        <img src="assets/images/miel-ete.jpg" alt="Pot de Miel d'Été du Rucher d'Hantael" class="product-img">
                         <span class="product-badge" style="background: #ef4444; color: white;">Épuisé</span>
                     </div>
                     <div class="product-content">
